@@ -9,6 +9,7 @@ RUN pip install -r requirements.txt
 
 # install model
 RUN mkdir -p /root/.cache/huggingface/hub/models--elyza--ELYZA-japanese-Llama-2-7b-fast-instruct/snapshots/89de33d1ad568855853196802aeaecd799c6586f/
+RUN apt-get install -y wget
 RUN wget -P /root/.cache/huggingface/hub/models--elyza--ELYZA-japanese-Llama-2-7b-fast-instruct/snapshots/89de33d1ad568855853196802aeaecd799c6586f/ https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b-fast-instruct/resolve/main/pytorch_model-00001-of-00002.bin
 RUN wget -P /root/.cache/huggingface/hub/models--elyza--ELYZA-japanese-Llama-2-7b-fast-instruct/snapshots/89de33d1ad568855853196802aeaecd799c6586f/ https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b-fast-instruct/resolve/main/pytorch_model-00002-of-00002.bin
 RUN wget -P /root/.cache/huggingface/hub/models--elyza--ELYZA-japanese-Llama-2-7b-fast-instruct/snapshots/89de33d1ad568855853196802aeaecd799c6586f/ https://huggingface.co/elyza/ELYZA-japanese-Llama-2-7b-fast-instruct/raw/main/config.json
